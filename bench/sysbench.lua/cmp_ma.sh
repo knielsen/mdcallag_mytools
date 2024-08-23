@@ -54,23 +54,17 @@ ma100433_rel_withdbg.z11a_c8r32 \
 done
 fi
 
-new=0
+new=1
 if [[ new -eq 1 ]]; then
 #ma100619_rel_withdbg_mdev34178_5b26a076.z11a_c8r32 \
 #ma101107_rel_withdbg_mdev33894_jun19.z11a_c8r32 \
 #ma101107_rel_withdbg_mdev33894_jun19.z11a_lwas4k_c8r32 \
 dbcreds=mariadb,root,pw,127.0.0.1,test,innodb
 for dcnf in \
-ma100524_rel_withdbg.z11a_c8r32 \
-ma100525_rel_withdbg.z11a_c8r32 \
-ma100617_rel_withdbg.z11a_c8r32 \
-ma100618_rel_withdbg.z11a_c8r32 \
-ma101107_rel_withdbg.z11a_c8r32 \
-ma101108_rel_withdbg.z11a_c8r32 \
-ma110401_rel_withdbg.z11b_c8r32 \
-ma110402_rel_withdbg.z11b_c8r32 \
-ma110501_rel_withdbg.z11b_c8r32 \
-ma110600_rel_withdbg.z11b_c8r32 \
+    ma1104_base.nosync_c4b8 \
+    ma1104_base.sync_c4b8 \
+    ma1104_mdev34705.nosync_c4b8 \
+    ma1104_mdev34705.sync_c4b8 \
 ; do
   dbms=$( echo $dcnf | tr '.' ' ' | awk '{ print $1 }' )
   cnf=$( echo $dcnf | tr '.' ' ' | awk '{ print $2 }' )
