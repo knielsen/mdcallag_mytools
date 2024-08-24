@@ -13,6 +13,7 @@ max_binlog_size=256M
 server_id=77
 binlog_format=ROW
 datadir=/data/m/my/data
+binlog_storage_engine=innodb
 
 innodb_file_per_table=1
 

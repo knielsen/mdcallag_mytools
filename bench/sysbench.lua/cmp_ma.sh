@@ -61,10 +61,12 @@ if [[ new -eq 1 ]]; then
 #ma101107_rel_withdbg_mdev33894_jun19.z11a_lwas4k_c8r32 \
 dbcreds=mariadb,root,pw,127.0.0.1,test,innodb
 for dcnf in \
+    ma1104_mdev34705.nosync_eng_c4b8 \
+    ma1104_mdev34705.sync_eng_c4b8 \
+    ma1104_base.nosync_nobl_c4b8 \
+    ma1104_base.sync_nobl_c4b8 \
     ma1104_base.nosync_c4b8 \
     ma1104_base.sync_c4b8 \
-    ma1104_mdev34705.nosync_c4b8 \
-    ma1104_mdev34705.sync_c4b8 \
 ; do
   dbms=$( echo $dcnf | tr '.' ' ' | awk '{ print $1 }' )
   cnf=$( echo $dcnf | tr '.' ' ' | awk '{ print $2 }' )

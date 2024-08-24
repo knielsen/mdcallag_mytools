@@ -1,4 +1,5 @@
 [mariadbd]
+bind-address=127.0.0.1
 sql_mode=no_engine_substitution,no_unsigned_subtraction
 default_tmp_storage_engine=MyISAM
 tmpdir=/data/m/my
